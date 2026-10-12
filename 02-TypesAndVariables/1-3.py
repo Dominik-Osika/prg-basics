@@ -117,7 +117,24 @@ bok1=int(input("bok1:"))
 bok2=int(input("bok2:"))
 bok3=int(input("bok3:"))
 objetosc=bok1*bok2*bok3
+pole=bok1*bok2*2 + bok1*bok3*2+bok2*bok3*2
 print(objetosc)
+print(pole)
+
+
+wartosc=int(input("wartosc:"))
+vat=0.23 * wartosc
+vat=round(vat,2)
+print(wartosc)
+print(vat)
+
+price=float(input("Cena:"))
+znizka=int(input("znizka %:"))
+wartosc_znizki=price*(znizka/100)
+cena_po_znizce=price-wartosc_znizki
+print(cena_po_znizce)
+print(wartosc_znizki)
+
 
 
 name = 'Dominik'   # replace Anna with your name
@@ -161,8 +178,138 @@ for i in liczby:
 
 
 
+imie="Dominik"
+for litera in imie:
+    litera_ord=ord(litera)
+    print("litera: ", litera, " ma kod: " , litera_ord)
+    
+
+first=input("podaj 1 litere: ")
+last = input("Podaj ostatnia litere: ")
+first_ord=ord(first)
+last_ord=ord(last)
+liczba_pomiedzy=last_ord-first_ord - 1
+print("Pomiedzy ", first, " i ", last, " jest ",liczba_pomiedzy, " liter.")
+
+
+print(chr(67),chr(111),chr(111),chr(108),chr(33))
+
+
+
+movie = "The Lord of the Rings: The Return of the King"
+
+print(movie.upper())
+print(movie.lower())
+print(movie.count("e"))
+print(movie.find("Lord"))
+print(movie.find("dragon"))
+
+
+
+age=int(input('Enter age: '))
+no_tax = age <=26
+if no_tax:
+    print("No tax")
+else:
+    print("tax")
+
+
+
+password = input("Podaj haslo:")
+password_ok = len(password) >= 8
+if password_ok:
+    print("haslo ok")
+else:
+    print("haslo nie ok")
+
+
+
+number=int(input("Enter number:"))
+if number%2==0:
+    print("even")
+else:
+    print("odd")
+
+
+car_number=input("Enter car registration number: ")
+is_krakow = car_number[0:2] == "KR" or "KK"
+if is_krakow:
+    print("jest z krakowa")
+else:
+    print("nie jest z krakowa")
+
+
+import random
+dice_roll_1 = random.randint(0,6)
+dice_roll_2 = random.randint(0,6)
+dice_roll_3 = random.randint(0,6)
+total = dice_roll_1+dice_roll_2+dice_roll_3
+print(total)
+
+
+import random
+komputer=random.randint(0,6)
+ty=int(input("zgadnij liczbe od 1 do 6"))
+if ty==komputer:
+    print("dobrze")
+else:
+    print("niestety zle")
+
+
+
+
+radius=int(input("podaj radius kola"))
+pi=3.14
+pole=pi*(radius**radius)
+obwod=2*pi*radius
+
+print(pole)
+print(obwod)
+
+
+celciusz=float(input("Podaj ile cecliuszy"))
+celciusz=round(celciusz,1)
+kelviny=celciusz+273.15
+fahrenheit=(celciusz*(9/5)) + 32
+print(kelviny)
+print(fahrenheit)
+
+
+
+
+cm=173
+inches=cm/2.54
+feet=int(inches//12)
+cale=round(inches % 12)
+
+print("Masz ", feet, " stop oraz ", cale, " cali")
 
 
 
 
 
+
+swift=input("Podaj kod swift: ")
+if len(swift)>8:
+    print(f"Kod Banku: {swift[0:4]}, Kod państwa: {swift[4:6]}, kod lokacji: {swift[6:8]}, kod branch: {swift[8:11]}")
+else:
+    print(f"Kod Banku: {swift[0:4]}, Kod państwa: {swift[4:6]}, kod lokacji: {swift[6:8]}")
+
+
+
+distance = int(input('Enter distance in km: '))
+fuel_price = float(input('Enter fuel price per liter: '))
+fuel_consumption= float(input("Konsumpcja w L/100km: "))
+total_fuel_consumption= fuel_consumption * (distance/100)
+total_cost=fuel_price*total_fuel_consumption
+print(total_fuel_consumption)
+print(total_cost)
+
+
+
+
+liczba_dec=int(input("Podaj liczbe w systemie dziesiatkowym: "))
+liczba_bin=bin(liczba_dec)
+liczba_hex=hex(liczba_dec)
+print(liczba_bin)
+print(liczba_hex)
